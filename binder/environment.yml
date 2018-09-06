@@ -1,0 +1,27 @@
+name: joint-crab
+
+channels:
+  - conda-forge
+
+dependencies:
+  - gammapy==0.9
+  - python==3.6
+  - ipython==7.2.0
+  - jupyter==1.0.0
+  - jupyterlab==0.35.4
+  - pyyaml==3.13
+  - click==7.0
+  - numpy==1.15.4
+  - scipy==1.1.0
+  - pandas==0.23.4
+  - matplotlib==2.1.1
+  - astropy==3.1
+  - regions==0.3
+  - reproject==0.4
+  - uncertainties==3.0.3
+  - iminuit==1.3.3
+  - healpy==1.12.8
+  - naima==0.8.3
+  - ruamel.yaml==0.15.81
+  - pip:
+    - multinorm

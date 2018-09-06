@@ -1,0 +1,60 @@
+parameters:
+- name: amplitude
+  value: 4.0438225259112874e-11
+  factor: 4.043822525911287
+  scale: 1e-11
+  unit: cm-2 s-1 TeV-1
+  min: .nan
+  max: .nan
+  frozen: false
+  error: 1.0086240893581804e-11
+- name: reference
+  value: 1.0
+  factor: 1.0
+  scale: 1.0
+  unit: TeV
+  min: .nan
+  max: .nan
+  frozen: true
+  error: 0.0
+- name: alpha
+  value: 2.3715262686905656
+  factor: 2.3715262686905656
+  scale: 1.0
+  unit: ''
+  min: .nan
+  max: .nan
+  frozen: false
+  error: 0.23894766664123065
+- name: beta
+  value: 0.13653396144779764
+  factor: 1.3653396144779764
+  scale: 0.1
+  unit: ''
+  min: .nan
+  max: .nan
+  frozen: false
+  error: 0.1274399433204297
+covariance:
+- - 1.0173225536336189e-22
+  - 0.0
+  - -2.1949385809886038e-12
+  - -1.0252246492938402e-12
+- - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+- - -2.1949385809886038e-12
+  - 0.0
+  - 0.05709598739328869
+  - 0.02961251417410123
+- - -1.0252246492938402e-12
+  - 0.0
+  - 0.02961251417410123
+  - 0.01624093915351434
+statname: wstat
+statval: 33.674625857299255
+fit_range:
+  min: 31622776.60168379
+  max: 1995262314.9688807
+  unit: keV
