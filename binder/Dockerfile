@@ -1,5 +1,4 @@
-FROM continuumio/miniconda3:4.5.11
-
+FROM continuumio/miniconda3:4.5.4
 RUN apt-get update && apt-get install -y build-essential
 
 # define work dir
