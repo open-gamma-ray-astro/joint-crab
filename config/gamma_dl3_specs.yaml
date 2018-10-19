@@ -1,0 +1,469 @@
+extensions:
+  INDEX:
+    subclasses:
+      OBS:
+        columns:
+          mandatory:
+            OBS_ID:
+              type: K
+              unit: null
+            RA_PNT:
+              type: E D 
+              unit: deg
+            DEC_PNT:
+              type: E D 
+              unit: deg
+            TSTART:
+              type: E D 
+              unit: s
+            TSTOP:
+              type: E D 
+              unit: s
+          optional:
+            ZEN_PNT:
+              type: E D
+              unit: deg
+            ALT_PNT:
+              type: E D
+              unit: deg
+            AZ_PNT:
+              type: E D
+              unit: deg
+            GLON_PNT:
+              type: E D
+              unit: deg
+            GLAT_PNT:
+              type: E D
+              unit: deg
+            ONTIME:
+              type: E D
+              unit: s
+            LIVETIME:
+              type: E D
+              unit: s
+            DEADC:
+              type: E D
+              unit: null
+            DATE-OBS:
+              type: A
+              unit: null
+            TIME-OBS:
+              type: A
+              unit: null
+            DATE-END:
+              type: A
+              unit: null
+            TIME-END:
+              type: A
+              unit: null
+            QUALITY:
+              type: K
+              unit: null
+            N_TELS:
+              type: K
+              unit: null
+            TELLIST:
+              type: A
+              unit: null
+            OBJECT:
+              type: A
+              unit: null
+            RA_OBJ:
+              type: E D 
+              unit: deg
+            DEC_OBJ:
+              type: E D 
+              unit: deg
+
+        header:
+          mandatory:
+            - HDUDOC
+            - HDUVERS
+            - HDUCLASS
+            - HDUCLAS1
+            - HDUCLAS2
+            - MJDREFI
+            - MJDREFF
+            - TIMEREF
+            - TIMESYS
+            - TIMEUNIT
+
+      HDU:
+        columns:
+          mandatory:
+            OBS_ID:
+              type: K
+              unit: null
+            HDU_TYPE:
+              type: A
+              unit: null
+            HDU_CLASS:
+              type: A
+              unit: null
+            FILE_DIR:
+              type: A
+              unit: null
+            FILE_NAME:
+              type: A
+              unit: null
+            HDU_NAME:
+              type: A
+              unit: null
+        header:
+          mandatory:
+            - HDUDOC
+            - HDUVERS
+            - HDUCLASS
+            - HDUCLAS1
+            - HDUCLAS2
+
+  EVENTS:
+    columns:
+      mandatory:
+        EVENT_ID:
+          type: K
+          unit: null
+          comment: Event identification number at the DL3 level 
+        TIME:
+          type: D
+          unit: s
+          comment: Event time
+        RA:
+          type: E D
+          unit: deg
+          comment: Reconstructed event Right Ascension
+        DEC:
+          type: E D
+          unit: deg
+          comment: Reconstructed event Declination
+        ENERGY:
+          type: E D
+          unit: TeV
+          comment: Reconstructed event energy
+    header:
+      mandatory:
+        - GEOLAT
+        - GEOLON
+        - ALTITUDE
+        - DEADC
+        - EQUINOX
+        - LIVETIME
+        - OBJECT
+        - OBS_ID
+        - ONTIME
+        - RADECSYS
+        - MJDREFI
+        - MJDREFF
+        - TIMEREF
+        - TIMESYS
+        - TIMEUNIT
+        - TSTART
+        - TSTOP
+
+  GTI:
+    columns:
+      mandatory:
+        START:
+          type: D
+          unit: s
+          comment: Start time of good time interval
+        STOP:
+          type: D
+          unit: s
+          comment: End time of good time interval
+    header:
+      mandatory:
+        - MJDREFI
+        - MJDREFF
+        - TIMEUNIT
+        - TIMESYS
+        - TIMEREF
+  
+  POINTING:
+    columns:
+      mandatory:
+        TIME:
+          type: D
+          unit: s
+          comment: Pointing time
+        RA_PNT:
+          type: E D
+          unit: deg
+          comment: Pointing Right Ascension
+        DEC_PNT:
+          type: E D
+          unit: deg
+          comment: Pointing declination
+        ALT_PNT:
+          type: E D
+          unit: deg
+          comment: Pointing altitude
+        AZ_PNT:
+          type: E D
+          unit: deg
+          comment: Pointing azimuth
+    header:
+      mandatory:
+        - MJDREFI
+        - MJDREFF
+        - TIMEUNIT
+        - TIMESYS
+        - TIMEREF
+    
+  RESPONSE:
+    subclasses:
+      EFF_AREA:
+        subclasses:
+          FULL-ENCLOSURE:
+            subclasses:
+              AEFF_2D:
+                columns:
+                  mandatory:
+                    ENERG_LO:
+                      type: E D
+                      unit: TeV
+                    ENERG_HI:
+                      type: E D
+                      unit: TeV
+                    THETA_LO:
+                      type: E D
+                      unit: deg
+                    THETA_HI:
+                      type: E D
+                      unit: deg
+                    EFFAREA:
+                      type: E D
+                      ndim: 2
+                      unit: m2
+                header:
+                  mandatory:
+                    - OBS_ID
+                    - LO_THRES
+                    - HI_THRES
+              AEFF_2D_RECO:
+                columns:
+                  mandatory:
+                    ENERG_LO:
+                      type: E D
+                      unit: TeV
+                    ENERG_HI:
+                      type: E D
+                      unit: TeV
+                    THETA_LO:
+                      type: E D
+                      unit: deg
+                    THETA_HI:
+                      type: E D
+                      unit: deg
+                    EFFAREA:
+                      type: E D
+                      ndim: 2
+                      unit: m2
+                header:
+                  mandatory:
+                    - OBS_ID
+                    - LO_THRES
+                    - HI_THRES
+          POINT-LIKE:
+            subclasses:
+              AEFF_2D:
+                columns:
+                  mandatory:
+                    ENERG_LO:
+                      type: E D
+                      unit: TeV
+                    ENERG_HI:
+                      type: E D
+                      unit: TeV
+                    THETA_LO:
+                      type: E D
+                      unit: deg
+                    THETA_HI:
+                      type: E D
+                      unit: deg
+                    EFFAREA:
+                      type: E D
+                      ndim: 2
+                      unit: m2
+                header:
+                  mandatory:
+                    - OBS_ID
+                    - LO_THRES
+                    - HI_THRES
+              AEFF_2D_RECO:
+                columns:
+                  mandatory:
+                    ENERG_LO:
+                      type: E D
+                      unit: TeV
+                    ENERG_HI:
+                      type: E D
+                      unit: TeV
+                    THETA_LO:
+                      type: E D
+                      unit: deg
+                    THETA_HI:
+                      type: E D
+                      unit: deg
+                    EFFAREA:
+                      type: E D
+                      ndim: 2
+                      unit: m2
+                header:
+                  mandatory:
+                    - OBS_ID
+                    - LO_THRES
+                    - HI_THRES
+      EDISP:
+        subclasses:
+          FULL-ENCLOSURE:
+            subclasses:
+              EDISP_2D: 
+                columns:
+                  mandatory:
+                    ENERG_LO:
+                      type: E D
+                      unit: TeV
+                    ENERG_HI:
+                      type: E D
+                      unit: TeV
+                    THETA_LO:
+                      type: E D
+                      unit: deg
+                    THETA_HI:
+                      type: E D
+                      unit: deg
+                    MIGRA_LO:
+                      type: E D
+                      unit: null
+                    MIGRA_HI:
+                      type: E D
+                      unit: null
+                    MATRIX:
+                      type: 3E 3D
+                      unit: null
+                      ndim: 3
+                header:
+                  mandatory: []
+          POINT-LIKE:
+            subclasses:
+              EDISP_2D: 
+                columns:
+                  mandatory:
+                    ENERG_LO:
+                      type: E D
+                      unit: TeV
+                    ENERG_HI:
+                      type: E D
+                      unit: TeV
+                    THETA_LO:
+                      type: E D
+                      unit: deg
+                    THETA_HI:
+                      type: E D
+                      unit: deg
+                    MIGRA_LO:
+                      type: E D
+                      unit: null
+                    MIGRA_HI:
+                      type: E D
+                      unit: null
+                    MATRIX:
+                      type: 3E 3D
+                      unit: null
+                      ndim: 3
+                header:
+                  mandatory: []
+      RPSF:
+        subclasses:
+          FULL-ENCLOSURE:
+            subclasses:
+              PSF_TABLE:
+                columns:
+                  mandatory:
+                    ENERG_LO:
+                      type: E D
+                      unit: TeV
+                    ENERG_HI:
+                      type: E D
+                      unit: TeV
+                    THETA_LO:
+                      type: E D
+                      unit: deg
+                    THETA_HI:
+                      type: E D
+                      unit: deg
+                    RAD_LO:
+                      type: E D
+                      unit: deg
+                    RAD_HI:
+                      type: E D
+                      unit: deg
+                    RPSF:
+                      type: E D
+                      ndim: 3
+                      unit: sr^-1
+                header:
+                  mandatory: []
+          POINT-LIKE:
+            subclasses:
+              PSF_TABLE:
+                columns:
+                  mandatory:
+                    ENERG_LO:
+                      type: E D
+                      unit: TeV
+                    ENERG_HI:
+                      type: E D
+                      unit: TeV
+                    THETA_LO:
+                      type: E D
+                      unit: deg
+                    THETA_HI:
+                      type: E D
+                      unit: deg
+                    RAD_LO:
+                      type: E D
+                      unit: deg
+                    RAD_HI:
+                      type: E D
+                      unit: deg
+                    RPSF:
+                      type: E D
+                      ndim: 3
+                      unit: sr^-1
+                header:
+                  mandatory: []
+      BKG:
+        subclasses:
+            POINT-LIKE:
+              subclasses:
+                  - BKG_2D
+                  - BKG_3D
+            FULL-ENCLOSURE:
+              subclasses:
+                  - BKG_2D
+                  - BKG_3D
+      RAD_MAX:
+        subclasses:
+          POINT-LIKE:
+            subclasses:
+              RAD_MAX_2D:
+                columns:
+                  mandatory:
+                    ENERG_LO:
+                      type: E D
+                      unit: TeV
+                    ENERG_HI:
+                      type: E D
+                      unit: TeV
+                    THETA_LO:
+                      type: E D
+                      unit: deg
+                    THETA_HI:
+                      type: E D
+                      unit: deg
+                    RAD_MAX:
+                      type: E D
+                      ndim: 2
+                      unit: deg
