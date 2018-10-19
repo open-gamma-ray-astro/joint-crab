@@ -10,7 +10,7 @@ COPY . /usr/src/app/
 
 # install environment
 RUN conda install -q -y pyyaml
-RUN python binder/binder.py
+RUN python env.py
 
 # install joint-crab package
 RUN /bin/bash -c "pip install ."
