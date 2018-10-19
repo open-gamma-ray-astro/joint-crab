@@ -9,7 +9,7 @@ WORKDIR /usr/src/app/
 COPY . /usr/src/app/
 
 # install environment
-RUN conda install -q -y pyyaml
+RUN conda install -q -y pyyaml==3.12
 RUN python env.py
 
 # install joint-crab package
