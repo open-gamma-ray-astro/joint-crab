@@ -34,7 +34,7 @@ def plot_contours_systematics():
     fig, axes = plt.subplots(1, 3, figsize=(16, 5))
 
     for name in config.all_datasets:
-        plot_contours_for_dataset(axes, name, color="gray")
+        plot_contours_for_dataset(axes, name)
 
     plot_contours_for_dataset(axes, "joint", color=config.datasets["joint"].color)
     plot_contours_for_dataset(axes, "joint_systematics", color="#002E63")
@@ -144,24 +144,25 @@ def add_legend(axes, items):
 def plot_contour_line(ax, x, y, **kwargs):
     """Plot smooth curve from points.
 
-    This doesn't seem to exist (or at least isn't easily accessible)
-    in matplotlib. So we compute a spline using scipy following
-    https://stackoverflow.com/questions/29837854
+    There is some noise in the contour points from MINUIT,
+    which throws off most interpolation schemes.
+
+    The LSQUnivariateSpline as used here gives good results.
+
+    It could probably be simplified, or Bezier curve plotting via
+    matplotlib could also be tried:
+    https://matplotlib.org/gallery/api/quad_bezier.html
     """
-    from scipy.interpolate import interp1d
+    from scipy.interpolate import LSQUnivariateSpline
 
-    # ax.plot(x, y, "+")
-
-    # Extend values so that spline doesn't have edge effects
     x = np.hstack([x, x, x])
     y = np.hstack([y, y, y])
 
     t = np.linspace(-1, 2, len(x), endpoint=False)
     tp = np.linspace(0, 1, 50)
 
-    # kind="cubic" doesn't come out nicely.
-    # Just use linear for now.
-    xp = interp1d(t, x, kind="cubic")(tp)
-    yp = interp1d(t, y, kind="cubic")(tp)
+    t_knots = np.linspace(t[1], t[-2], 10)
+    xs = LSQUnivariateSpline(t, x, t_knots, k=5)(tp)
+    ys = LSQUnivariateSpline(t, y, t_knots, k=5)(tp)
 
-    ax.plot(xp, yp, **kwargs)
+    ax.plot(xs, ys, **kwargs)

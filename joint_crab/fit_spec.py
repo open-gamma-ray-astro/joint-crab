@@ -1,6 +1,5 @@
 """Run spectral fits with Gammapy and sherpa."""
 import logging
-from pathlib import Path
 import numpy as np
 from gammapy.spectrum import SpectrumFit
 from . import utils
@@ -73,7 +72,7 @@ def compute_results(fit):
     return results
 
 
-def compute_contours(fit, numpoints=30):
+def compute_contours(fit, numpoints=10):
     contours = {}
 
     log.info("Computing contour: (amplitude, alpha)")

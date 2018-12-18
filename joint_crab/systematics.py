@@ -299,7 +299,7 @@ def compute_fit_results(minuit):
     write_yaml(results, path)
 
 
-def compute_contours(minuit, numpoints=3):
+def compute_contours(minuit, numpoints=10):
     contours = {}
 
     log.info("Computing contour: (amplitude, alpha)")

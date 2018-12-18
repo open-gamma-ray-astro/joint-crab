@@ -6,7 +6,7 @@ Log parabola; reference energy for amplitude parameter is at 1 TeV
 
 ### fermi
 
-* amplitude: 40.43823 +/- 10.08624 1e-12 cm-2 s-1 TeV-1
+* amplitude: 40.43823 +/- 10.08630 1e-12 cm-2 s-1 TeV-1
 * alpha: 2.37153 +/- 0.23895
 * beta: 0.13653 +/- 0.12744
 

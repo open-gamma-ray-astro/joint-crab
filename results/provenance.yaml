@@ -314,9 +314,9 @@ env:
   system: Darwin
   user: deil
 software:
-  astropy: 3.0.4
+  astropy: '3.1'
   gammapy: '0.9'
-  numpy: 1.15.1
+  numpy: 1.15.4
   python_executable: /Users/deil/software/anaconda3/envs/joint-crab/bin/python
   python_version: 3.6.0
   scipy: 1.1.0
