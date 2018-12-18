@@ -6,8 +6,7 @@ COPY binder/environment.yml tmp/
 WORKDIR tmp/
 
 RUN conda env create -f environment.yml
-RUN echo 'source activate joint-crab' >> ~/.bashrc
-ENV PATH /opt/conda/envs/joint-crab/bin:$PATH
+RUN echo 'conda activate joint-crab' >> ~/.bashrc
 
 # define work dir
 WORKDIR /usr/src/app/
