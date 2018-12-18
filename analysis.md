@@ -3,7 +3,7 @@
 The analysis results from this paper, including the plots, are reproducible.
 
 If you have installed the `joint-crab` bundle as it is described in the
-[README](../README.md), you can type in the terminal the following commands to reproduce the analysis and figures. 
+[README](README.md), you can type in the terminal the following commands to reproduce the analysis and figures. 
 You may choose to perform the whole analysis with a single command or do it in a step-by-step basis.
 
 #### All steps in a sigle command
@@ -37,66 +37,44 @@ Commands:
 
 #### Step-by-step
 
-Let's clean eventual previous results produced.
+**1- Let's clean eventual previous results produced.**
 
-    $ ./make.py clean
+`$ ./make.py clean
     
-We perform the analysis in a procedural way. 
-    
+**2- We perform the analysis in a procedural way.**
+
     $ ./make.py maps
     $ ./make.py extract-spectra
     $ ./make.py fit-spec
     $ ./make.py syst-err
     $ ./make.py errorbands
 
-Then we gather the results in tables. 
+**3- Then we gather the results in tables.**
 
     $ ./make.py summary-data
     $ ./make.py summary-results
 
-* Table 1:
-  - [./results/summary/data.md](./results/summary/data.md)
-  - [./results/summary/data.tex](./results/summary/data.tex)
-  
-* Table 2:  
-  - [./results/summary/results.md](./results/summary/results.md)
-  - [./results/summary/results.tex](./results/summary/results.tex)
+* Table 1: [./results/summary/data.md](./results/summary/data.md) | [./results/summary/data.tex](./results/summary/data.tex)
+* Table 2: [./results/summary/results.md](./results/summary/results.md) | [./results/summary/results.tex](./results/summary/results.tex)
 
 
-And finally, let's produce the plots. 
+**4- Finally, let's produce the plots.**
 
 `$ ./make.py plot-counts`
     
-* Fig. 1:
-  - [./results/figures/counts_spectra.png](./results/figures/counts_spectra.png)
-  - [./results/figures/counts_spectra.pdf](./results/figures/counts_spectra.pdf)
-       
+* Fig. 1: [./results/figures/counts_spectra.png](./results/figures/counts_spectra.png) | [./results/figures/counts_spectra.pdf](./results/figures/counts_spectra.pdf)
     
 `$ ./make.py plot-seds`
 
-
-* Fig. 2:
-  - [./results/figures/crab_sed_fit.png](./results/figures/crab_sed_fit.png)
-  - [./results/figures/crab_sed_fit.pdf](./results/figures/crab_sed_fit.pdf)
-  
+* Fig. 2: [./results/figures/crab_sed_fit.png](./results/figures/crab_sed_fit.png) | [./results/figures/crab_sed_fit.pdf](./results/figures/crab_sed_fit.pdf)
   
 `$ ./make.py plot-errorbands`
 
-
-* Fig. 3:
-  - [./results/figures/errorband_sed_veritas.png](./results/figures/errorband_sed_veritas.png)
-  - [./results/figures/errorband_sed_veritas.pdf](./results/figures/errorband_sed_veritas.pdf)
-  
+* Fig. 3: [./results/figures/errorband_sed_veritas.png](./results/figures/errorband_sed_veritas.png) | [./results/figures/errorband_sed_veritas.pdf](./results/figures/errorband_sed_veritas.pdf)
   
 `$ ./make.py plot-contours`
- 
     
-* Fig. 4:
-  - [./results/figures/contours.png](./results/figures/contours.png)
-  - [./results/figures/contours.pdf](./results/figures/contours.pdf)
-  
-* Fig. 5:
-  - [./results/figures/contours_systematics.png](./results/figures/contours_systematics.png)
-  - [./results/figures/contours_systematics.pdf](./results/figures/contours_systematics.pdf)
+* Fig. 4: [./results/figures/contours.png](./results/figures/contours.png) | [./results/figures/contours.pdf](./results/figures/contours.pdf)
+* Fig. 5: [./results/figures/contours_systematics.png](./results/figures/contours_systematics.png) | [./results/figures/contours_systematics.pdf](./results/figures/contours_systematics.pdf)
   
 

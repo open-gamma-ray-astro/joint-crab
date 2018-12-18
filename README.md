@@ -6,81 +6,47 @@
 
 This repository contains content related to the paper *Towards multi-instrument and reproducible gamma-ray analysis*.
 
-This `joint-crab` bundle allows to reproduce the published results by installation and execution in the local desktop, using a Docker image or via the MyBinder cloud service.
+This `joint-crab` bundle allows to reproduce the published results by its installation and execution in the local desktop, using a Docker image or via the MyBinder cloud service.
 
-<details>
-<summary>Content</summary>
-<pre>
-.
-├── binder
-│   └── environment.yml
-├── data
-│   ├── README.md
-│   ├── fact
-│   ├── fermi
-│   ├── hess
-│   ├── magic
-│   ├── other
-│   └── veritas
-├── joint_crab
-│   ├── __init__.py
-│   ├── conf.py
-│   ├── errorbands.py
-│   ├── extract_lat.py
-│   ├── extract_ogip_spectra.py
-│   ├── fit_spec.py
-│   ├── maps.py
-│   ├── models.py
-│   ├── plot_contours.py
-│   ├── plot_counts.py
-│   ├── plot_errorbands.py
-│   ├── plot_seds.py
-│   ├── provenance.py
-│   ├── summary_data.py
-│   ├── summary_results.py
-│   ├── systematics.py
-│   └── utils.py
-├── presentations
-│   ├── README.md
-│   └── 2018tevpa
-│       ├── README.md
-│       ├── poster.pdf
-│       └── slides.pdf
-├── results
-│  ├── errorbands
-│  ├── figures
-│  ├── fits
-│  ├── maps
-│  ├── spectra
-│  └── summary
-├── 1_data.ipynb
-├── 2_counts.ipynb
-├── 3_systematics.ipynb
-├── 4_naima.ipynb
-├── 5_crab_pulsar_nebula_sed.ipynb
-├── Dockerfile
-├── LICENSE
-├── README.md
-├── analysis.md
-├── docker.md
-└── make.py
-</pre>
-</details>
+##  Contents
 
+####  Datasets
 
-##  The `joint-crab` bundle
+You may find the datasets used as inputs for the analysis scripts in the [folder data](./data). 
+They are grouped in subfolders accounting for their origin. The are Crab observations from the Fermi-LAT gamma-ray space telescope, as well as from four ground-based gamma-ray telescopes (MAGIC, VERITAS, FACT, H.E.S.S.).
+
+####  Results
+
+The results produced in the analysis are placed in the [folder results](./results). 
+The tables and figures published in the paper have been prepared using these results. 
+You may reproduce the results following the instructions given in the [analysis section](analysis.md).
+
+* Table 1: [./results/summary/data.md](./results/summary/data.md) | [./results/summary/data.tex](./results/summary/data.tex)
+* Table 2: [./results/summary/results.md](./results/summary/results.md) | [./results/summary/results.tex](./results/summary/results.tex)
+* Fig. 1: [./results/figures/counts_spectra.png](./results/figures/counts_spectra.png) | [./results/figures/counts_spectra.pdf](./results/figures/counts_spectra.pdf)
+* Fig. 2: [./results/figures/crab_sed_fit.png](./results/figures/crab_sed_fit.png) | [./results/figures/crab_sed_fit.pdf](./results/figures/crab_sed_fit.pdf)
+* Fig. 3: [./results/figures/errorband_sed_veritas.png](./results/figures/errorband_sed_veritas.png) | [./results/figures/errorband_sed_veritas.pdf](./results/figures/errorband_sed_veritas.pdf)
+* Fig. 4: [./results/figures/contours.png](./results/figures/contours.png) | [./results/figures/contours.pdf](./results/figures/contours.pdf)
+* Fig. 5: [./results/figures/contours_systematics.png](./results/figures/contours_systematics.png) | [./results/figures/contours_systematics.pdf](./results/figures/contours_systematics.pdf)
+
+####  Scripts
+
+The scripts needed to perform the analysis and reproduce the results are placed in the [folder joint_crab](./joint_crab).
+We also provide several complemetary jupyter notebooks at the root level. You can run these notebooks locally or in the MyBinder cloud infrastrcuture.
+
+##  Executing the `joint-crab` bundle
 
 You can execute the provided scripts in a specific `joint-crab` *conda environment*. This will allow you to reproduce the results published in the paper.
 
 ####  Set-up the environment
 
-As a first approach to assure the reproducibility of the results we provide a [conda configuration file](./environment.yml) to build a virtual environment with pinned versions for the software dependencies.
+As a first approach to assure the reproducibility of the results we provide a [conda configuration file](./binder/environment.yml) to build a virtual environment with pinned versions for the software dependencies.
 
 Hence, as a requisite you need [Anaconda](https://www.anaconda.com/download/) or
 [miniconda](https://conda.io/miniconda.html) - Python>=3.6 software installed in your desktop. Once you have installed this software, and downloaded the content of this `joint-crab` repository, you can type in the terminal the following commands at the top-level of the `joint-crab` folder:
 
     $ conda env create -f binder/environment.yml
-    $ source activate joint-crab
+    $ conda activate joint-crab
 
 ####  Reproduce the results
 * [How to reproduce results and figures with `make.py`](analysis.md)
