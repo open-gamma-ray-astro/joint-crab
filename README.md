@@ -1,6 +1,6 @@
 # Towards multi-instrument and reproducible gamma-ray analysis
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1409831.svg)](https://doi.org/10.5281/zenodo.1409831)
+[![DOI](https://zenodo.org/badge/146204837.svg)](https://zenodo.org/badge/latestdoi/146204837)
 
 [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/open-gamma-ray-astro/joint-crab/master?urlpath=lab/tree/joint-crab)
 
