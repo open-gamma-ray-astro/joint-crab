@@ -81,6 +81,6 @@ Since the availability of all the external software dependencies is not assured 
 * [How to reproduce results with Docker](docker.md)
 
 
-## Licence
+## License
 
 The code and content in this repository is shared under the [BSD-3-Clause license](LICENSE) (read more at [OSI](https://opensource.org/licenses/BSD-3-Clause)).
