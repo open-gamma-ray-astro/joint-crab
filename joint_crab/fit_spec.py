@@ -1,6 +1,5 @@
 """Run spectral fits with Gammapy and sherpa."""
 import logging
-import numpy as np
 from gammapy.spectrum import SpectrumFit
 from . import utils
 from .conf import config

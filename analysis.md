@@ -54,27 +54,27 @@ Commands:
     $ ./make.py summary-data
     $ ./make.py summary-results
 
-* Table 1: [./results/summary/data.md](./results/summary/data.md) | [./results/summary/data.tex](./results/summary/data.tex)
-* Table 2: [./results/summary/results.md](./results/summary/results.md) | [./results/summary/results.tex](./results/summary/results.tex)
+* Table 1: [results/summary/data.md](results/summary/data.md) | [results/summary/data.tex](results/summary/data.tex)
+* Table 2: [results/summary/results.md](results/summary/results.md) | [results/summary/results.tex](results/summary/results.tex)
 
 
 **4- Finally, let's produce the plots.**
 
 `$ ./make.py plot-counts`
     
-* Fig. 1: [./results/figures/counts_spectra.png](./results/figures/counts_spectra.png) | [./results/figures/counts_spectra.pdf](./results/figures/counts_spectra.pdf)
+* Fig. 1: [results/figures/counts_spectra.png](results/figures/counts_spectra.png) | [results/figures/counts_spectra.pdf](results/figures/counts_spectra.pdf)
     
 `$ ./make.py plot-seds`
 
-* Fig. 2: [./results/figures/crab_sed_fit.png](./results/figures/crab_sed_fit.png) | [./results/figures/crab_sed_fit.pdf](./results/figures/crab_sed_fit.pdf)
+* Fig. 2: [results/figures/crab_sed_fit.png](results/figures/crab_sed_fit.png) | [results/figures/crab_sed_fit.pdf](results/figures/crab_sed_fit.pdf)
   
 `$ ./make.py plot-errorbands`
 
-* Fig. 3: [./results/figures/errorband_sed_veritas.png](./results/figures/errorband_sed_veritas.png) | [./results/figures/errorband_sed_veritas.pdf](./results/figures/errorband_sed_veritas.pdf)
+* Fig. 3: [results/figures/errorband_sed_veritas.png](results/figures/errorband_sed_veritas.png) | [results/figures/errorband_sed_veritas.pdf](results/figures/errorband_sed_veritas.pdf)
   
 `$ ./make.py plot-contours`
     
-* Fig. 4: [./results/figures/contours.png](./results/figures/contours.png) | [./results/figures/contours.pdf](./results/figures/contours.pdf)
-* Fig. 5: [./results/figures/contours_systematics.png](./results/figures/contours_systematics.png) | [./results/figures/contours_systematics.pdf](./results/figures/contours_systematics.pdf)
+* Fig. 4: [results/figures/contours.png](results/figures/contours.png) | [results/figures/contours.pdf](results/figures/contours.pdf)
+* Fig. 5: [results/figures/contours_systematics.png](results/figures/contours_systematics.png) | [results/figures/contours_systematics.pdf](results/figures/contours_systematics.pdf)
   
 
