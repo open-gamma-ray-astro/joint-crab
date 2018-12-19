@@ -35,7 +35,15 @@ The scripts needed to perform the analysis and reproduce the results are placed 
 
 ####  Jupyter notebooks
 
-We also provide several complemetary jupyter notebooks at the root level. You can run these notebooks locally or in the MyBinder cloud infrastrcuture.
+We also provide several Jupyter notebooks to explore the data or results, or contain extra analyses in addition to the Python scripts.
+
+* [1_data.ipynb](1_data.ipynb) - overview of input data files, as well as sky maps and spectra, and how to access them from Python
+* [2_results.ipynb](2_results.ipynb) - overview of results file and how to access them from Python
+* [3_systematics.ipynb](3_systematics.ipynb) - a detailed description of the systematic error likelihood fit
+* [4_naima.ipynb](4_naima.ipynb) - SED model fit using inverse Compton radiation from electrons using Naima
+* [5_crab_pulsar_nebula_sed.ipynb](5_crab_pulsar_nebula_sed.ipynb) - A check that the Crab pulsar emission is faint above 30 GeV
+
+You can read these notebooks on Github as static documents, or execute them on your local machine or the MyBinder cloud infrastrcuture (see instructions below).
 
 ##  Executing the `joint-crab` bundle
 
