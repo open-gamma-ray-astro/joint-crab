@@ -4,7 +4,7 @@
 
 [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/open-gamma-ray-astro/joint-crab/master?urlpath=lab/tree/joint-crab)
 
-This repository contains content related to the paper *Towards multi-instrument and reproducible gamma-ray analysis*.
+This repository contains material related to the paper *Towards multi-instrument and reproducible gamma-ray analysis*.
 
 This `joint-crab` bundle allows to reproduce the published results by its installation and execution in the local desktop, using a Docker image or via the MyBinder cloud service.
 
@@ -13,7 +13,7 @@ This `joint-crab` bundle allows to reproduce the published results by its instal
 ####  Datasets
 
 You may find the datasets used as inputs for the analysis scripts in the [folder data](./data). 
-They are grouped in subfolders accounting for their origin. The are Crab observations from the Fermi-LAT gamma-ray space telescope, as well as from four ground-based gamma-ray telescopes (MAGIC, VERITAS, FACT, H.E.S.S.).
+They are grouped in subfolders accounting for their origin. They consist of Crab observations from the Fermi-LAT gamma-ray space telescope, as well as from four ground-based gamma-ray telescopes (MAGIC, VERITAS, FACT, H.E.S.S.).
 
 ####  Results
 
@@ -51,7 +51,7 @@ Hence, as a requisite you need [Anaconda](https://www.anaconda.com/download/) or
 ####  Reproduce the results
 * [How to reproduce results and figures with `make.py`](analysis.md)
 
-####  Check out the  notebooks
+####  Check out the notebooks
 
 If you have set-up the environment as it is described above, you can open and run the complemetary notebooks that we provide by typing in the terminal of your desktop:
 
@@ -72,4 +72,4 @@ Since the availability of all the external software dependencies is not assured 
 
 ## Licence
 
-The code anc content in this repository is shared under the [BSD-3-Clause license](LICENSE) (read more at [OSI](https://opensource.org/licenses/BSD-3-Clause)).
+The code and content in this repository is shared under the [BSD-3-Clause license](LICENSE) (read more at [OSI](https://opensource.org/licenses/BSD-3-Clause)).
