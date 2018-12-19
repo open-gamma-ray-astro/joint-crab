@@ -17,12 +17,12 @@ You may choose to perform the whole analysis with a single command or do it in a
 <details>
 <summary>Subcommands</summary>
 <pre>
-Commands:
   all              Run all steps.
   clean            Clean out results folder.
-  errorbands       Compute flux error bands.
-  extract-spectra  Extract 1d spectra.
-  fit-spec         Execute spectrum fit.
+  extract-spectra  Extract 1d spectra
+  fit-errorbands   Compute flux error bands.
+  fit-spectra      Execute spectrum fit.
+  fit-systematics  Fit that includes systematics.
   maps             Make and plot sky maps.
   plot-contours    Plot contours.
   plot-counts      Plot counts spectra.
@@ -31,7 +31,6 @@ Commands:
   provenance       Write `results/provenance.yaml`.
   summary-data     Write summary for data.
   summary-results  Write summary for results.
-  syst-err         Fit that includes systematics.
 </pre>
 </details>
 
@@ -45,9 +44,9 @@ Commands:
 
     $ ./make.py maps
     $ ./make.py extract-spectra
-    $ ./make.py fit-spec
-    $ ./make.py syst-err
-    $ ./make.py errorbands
+    $ ./make.py fit-spectra
+    $ ./make.py fit-systematics
+    $ ./make.py fit-errorbands
 
 **3- Then we gather the results in tables.**
 
