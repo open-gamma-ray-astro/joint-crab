@@ -32,6 +32,9 @@ You may reproduce the results following the instructions given in the [analysis 
 ####  Scripts
 
 The scripts needed to perform the analysis and reproduce the results are placed in the [folder joint_crab](./joint_crab).
+
+####  Jupyter notebooks
+
 We also provide several complemetary jupyter notebooks at the root level. You can run these notebooks locally or in the MyBinder cloud infrastrcuture.
 
 ##  Executing the `joint-crab` bundle
