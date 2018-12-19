@@ -41,27 +41,23 @@ def run_analysis(which):
     log.info("Running fit")
     fit.run()
 
-    fit_results = compute_results(fit)
+    fit_results = make_results_dict(fit)
+    utils.write_yaml(fit_results, f"results/fit/fit_{which}.yaml")
 
     contour_results = compute_contours(fit)
-
-    utils.write_yaml(fit_results, f"results/fit/fit_{which}.yaml")
     utils.write_yaml(contour_results, f"results/fit/contours_{which}.yaml")
 
 
 # TODO: Use parameters.to_dict instead!
-def compute_results(fit):
+def make_results_dict(fit):
+    pars = fit.result[0].model.parameters
     results = {}
     results["parameters"] = []
-    params = fit.result[0].model.parameters
-    for param_index, parameter in enumerate(params):
-        vals = parameter.to_dict()
-        error = np.sqrt(
-            fit.result[0].model.parameters.covariance[param_index][param_index]
-        )
-        vals["error"] = float(error)
-        results["parameters"].append(vals)
-    results["covariance"] = fit.result[0].model.parameters.covariance.tolist()
+    for par in pars:
+        info = par.to_dict()
+        info["error"] = float(pars.error(par))
+        results["parameters"].append(info)
+    results["covariance"] = pars.covariance.tolist()
     results["statname"] = fit.result[0].statname
     results["statval"] = float(fit.result[0].statval)
     results["fit_range"] = {
