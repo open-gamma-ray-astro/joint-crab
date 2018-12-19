@@ -42,13 +42,6 @@ class SystematicsSpetrumModel(SpectralModel):
             ]
         )
 
-    def make_model(self):
-        model = Log10ParabolaEnergyScale()
-        z = Parameter("z", 0, min=-0.3, max=0.3)
-        parameters = self.parameters.parameters[:4] + [z]
-        model.parameters = Parameters(parameters)
-        return model
-
 
 class SystematicsSpectrumFit(SpectrumFit):
     delta = {"fermi": 0.05, "magic": 0.15, "hess": 0.15, "veritas": 0.15, "fact": 0.15}
@@ -60,7 +53,7 @@ class SystematicsSpectrumFit(SpectrumFit):
     def make_fit(self, name):
         dataset = config.datasets[name]
         observations = dataset.get_SpectrumObservationList()
-        model = self._model.make_model()
+        model = Log10ParabolaEnergyScale()
         fit_range = dataset.energy_range
         return SpectrumFit(obs_list=observations, model=model, fit_range=fit_range)
 
