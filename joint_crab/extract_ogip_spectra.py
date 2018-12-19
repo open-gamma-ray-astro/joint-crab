@@ -5,9 +5,12 @@ from regions import CircleSkyRegion
 from gammapy.data import EventList, DataStore
 from gammapy.maps import HpxNDMap
 from gammapy.irf import EnergyDependentTablePSF
-from gammapy.background import ReflectedRegionsBackgroundEstimator
+from gammapy.background import (
+    ReflectedRegionsBackgroundEstimator,
+    ring_background_estimate,
+)
 from gammapy.spectrum import SpectrumExtraction
-from .extract_lat import fermi_ring_background_extract, SpectrumExtractionFermi1D
+from .extract_lat import SpectrumExtractionFermi1D
 from .conf import config
 
 log = logging.getLogger(__name__)
@@ -45,7 +48,13 @@ def extract_spectra_fermi(target_position, on_radius):
     valid_range = (config.energy_bins >= 30 * u.GeV) * (config.energy_bins <= 2 * u.TeV)
     energy = config.energy_bins[valid_range]
 
-    bkg_estimate = fermi_ring_background_extract(events, target_position, on_radius)
+    bkg_estimate = ring_background_estimate(
+        pos=target_position,
+        on_radius=on_radius,
+        inner_radius=1 * u.deg,
+        outer_radius=2 * u.deg,
+        events=events,
+    )
 
     extract = SpectrumExtractionFermi1D(
         events=events,
@@ -55,7 +64,6 @@ def extract_spectra_fermi(target_position, on_radius):
         target_position=target_position,
         on_radius=on_radius,
         energy=energy,
-        containment_correction=True,
     )
     obs = extract.run()
 
