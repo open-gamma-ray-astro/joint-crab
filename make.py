@@ -53,9 +53,9 @@ def cli_all(ctx):
 
     ctx.invoke(cli_maps)
     ctx.invoke(cli_extract_spectra)
-    ctx.invoke(cli_fit_spec)
-    ctx.invoke(cli_syst_err)
-    ctx.invoke(cli_errorbands)
+    ctx.invoke(cli_fit_spectra)
+    ctx.invoke(cli_fit_systematics)
+    ctx.invoke(cli_fit_errorbands)
 
     ctx.invoke(cli_summary_data)
     ctx.invoke(cli_summary_results)
@@ -112,7 +112,7 @@ def cli_provenance():
 def cli_extract_spectra(dataset):
     """Extract 1d spectra"""
     log.info("Executing task: extract-spectra.")
-    joint_crab.extract_ogip_spectra.extract_spectra(dataset)
+    joint_crab.extract_spectra.main(dataset)
 
 
 @cli.command("maps")
@@ -122,31 +122,31 @@ def cli_maps():
     joint_crab.maps.main()
 
 
-@cli.command("fit-spec")
+@cli.command("fit-spectra")
 @click.option(
     "--dataset",
     default="all",
     help="Which dataset to process? (default: all)",
     type=click.Choice(["fermi", "fact", "magic", "hess", "veritas", "joint", "all"]),
 )
-def cli_fit_spec(dataset):
+def cli_fit_spectra(dataset):
     """Execute spectrum fit."""
-    log.info("Executing task: fit-spec")
-    joint_crab.fit_spec.main(dataset)
+    log.info("Executing task: fit-spectra")
+    joint_crab.fit_spectra.main(dataset)
 
 
-@cli.command("syst-err")
-def cli_syst_err():
+@cli.command("fit-systematics")
+def cli_fit_systematics():
     """Fit that includes systematics."""
     log.info("Executing task: syst-err")
-    joint_crab.systematics.main()
+    joint_crab.fit_systematics.main()
 
 
-@cli.command("errorbands")
-def cli_errorbands():
+@cli.command("fit-errorbands")
+def cli_fit_errorbands():
     """Compute flux error bands."""
-    log.info("Executing task: errorbands")
-    joint_crab.errorbands.main()
+    log.info("Executing task: fit-errorbands")
+    joint_crab.fit_errorbands.main()
 
 
 @cli.command("summary-data")

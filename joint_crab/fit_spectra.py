@@ -3,7 +3,7 @@ import logging
 from gammapy.spectrum import SpectrumFit
 from . import utils
 from .conf import config
-from .models import Log10Parabola
+from .fit_models import Log10Parabola
 
 log = logging.getLogger(__name__)
 

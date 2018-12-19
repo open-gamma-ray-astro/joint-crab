@@ -9,15 +9,15 @@ Jupyter notebooks.
 from . import utils
 from . import conf
 from . import provenance
-from . import models
 from . import maps
 
 # Analysis
-from . import extract_lat
-from . import extract_ogip_spectra
-from . import fit_spec
-from . import systematics
-from . import errorbands
+from . import extract_fermi
+from . import extract_spectra
+from . import fit_models
+from . import fit_spectra
+from . import fit_systematics
+from . import fit_errorbands
 
 # Text summary
 from . import summary_data

@@ -3,8 +3,8 @@ import logging
 from gammapy.spectrum import SpectrumFit
 from gammapy.spectrum.models import SpectralModel
 from gammapy.utils.fitting import Parameter, Parameters
-from .models import Log10ParabolaEnergyScale
-from .fit_spec import compute_contours
+from .fit_models import Log10ParabolaEnergyScale
+from .fit_spectra import compute_contours
 from .conf import config
 from . import utils
 

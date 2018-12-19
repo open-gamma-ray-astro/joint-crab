@@ -6,7 +6,7 @@ import scipy.stats
 import astropy.units as u
 from astropy.table import Table
 from .utils import load_yaml
-from .models import Log10Parabola
+from .fit_models import Log10Parabola
 from .conf import config
 
 log = logging.getLogger(__name__)

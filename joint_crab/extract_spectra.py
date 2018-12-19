@@ -10,13 +10,13 @@ from gammapy.background import (
     ring_background_estimate,
 )
 from gammapy.spectrum import SpectrumExtraction
-from .extract_lat import SpectrumExtractionFermi1D
+from .extract_fermi import SpectrumExtractionFermi1D
 from .conf import config
 
 log = logging.getLogger(__name__)
 
 
-def extract_spectra(which):
+def main(which):
     if which in {"fermi", "all"}:
         dataset = config.datasets["fermi"]
         extract_spectra_fermi(config.source_pos, dataset.on_radius)
