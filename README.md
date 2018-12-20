@@ -6,7 +6,7 @@
 
 This repository contains material related to the paper *Towards multi-instrument and reproducible gamma-ray analysis*.
 
-This `joint-crab` bundle allows to reproduce the published results by its installation and execution in the local desktop, using a Docker image or via the MyBinder cloud service.
+This `joint-crab` bundle allows to reproduce the published results by its installation and execution in the local desktop, using a Docker image or via the Binder cloud service.
 
 ##  Contents
 
@@ -43,7 +43,7 @@ We also provide several Jupyter notebooks to explore the data or results, or con
 * [4_naima.ipynb](4_naima.ipynb) - SED model fit using inverse Compton radiation from electrons using Naima
 * [5_crab_pulsar_nebula_sed.ipynb](5_crab_pulsar_nebula_sed.ipynb) - A check that the Crab pulsar emission is faint above 30 GeV
 
-You can read these notebooks on Github as static documents, or execute them on your local machine or the MyBinder cloud infrastrcuture (see instructions below).
+You can read these notebooks on Github as static documents, or execute them on your local machine or the Binder cloud infrastrcuture (see instructions below).
 
 ##  Executing the `joint-crab` bundle
 
@@ -72,7 +72,7 @@ jupyter lab
 
 ##  Binder space
 
-Alternatively you can also open an run the notebooks in the MyBinder cloud infrastructure. You can also open a terminal tab in the MyBinder space and run the analysis as it is decribed in the [Reproduce the results](analysis.md) section.
+Alternatively you can also open an run the notebooks in the Binder cloud infrastructure. You can also open a terminal tab in the Binder space and run the analysis as it is decribed in the [Reproduce the results](analysis.md) section.
 
 [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/open-gamma-ray-astro/joint-crab/master?urlpath=lab/tree/joint-crab)
 
