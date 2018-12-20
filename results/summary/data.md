@@ -36,25 +36,25 @@ Infos from datastore:
 - n_obs: 2
 - obstime: 0.66 hours
 
-## hess
+## veritas
 
 Infos from dataset:
 
-- energy_min: 0.66000 TeV
+- energy_min: 0.15000 TeV
 - energy_max: 30.00000 TeV
-- r_on: 0.11000 deg
+- r_on: 0.10000 deg
 
 Infos from spec:
 
-- livetime: 1.75 hours
-- n_on: 459
-- excess: 431.5
-- background: 27.5
+- livetime: 0.61 hours
+- n_on: 289
+- excess: 275.3
+- background: 13.7
 
 Infos from datastore:
 
-- n_obs: 4
-- obstime: 1.87 hours
+- n_obs: 2
+- obstime: 0.67 hours
 
 ## fact
 
@@ -76,22 +76,22 @@ Infos from datastore:
 - n_obs: 125
 - obstime: 10.33 hours
 
-## veritas
+## hess
 
 Infos from dataset:
 
-- energy_min: 0.15000 TeV
+- energy_min: 0.66000 TeV
 - energy_max: 30.00000 TeV
-- r_on: 0.10000 deg
+- r_on: 0.11000 deg
 
 Infos from spec:
 
-- livetime: 0.61 hours
-- n_on: 289
-- excess: 275.3
-- background: 13.7
+- livetime: 1.75 hours
+- n_on: 459
+- excess: 431.5
+- background: 27.5
 
 Infos from datastore:
 
-- n_obs: 2
-- obstime: 0.67 hours
+- n_obs: 4
+- obstime: 1.87 hours

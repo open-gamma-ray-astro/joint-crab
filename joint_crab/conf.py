@@ -72,7 +72,7 @@ class Config:
     source_pos = SkyCoord("83d37m59.0988s", "22d00m52.2s")
     plot = PlotConfig()
 
-    all_datasets = ["fermi", "magic", "hess", "fact", "veritas"]
+    all_datasets = ["fermi", "magic", "veritas", "fact", "hess"]
     all_datasets_plus_joint = all_datasets + ["joint"]
 
     def __init__(self):
@@ -147,7 +147,7 @@ class Dataset(object):
         if self.name == "joint":
             spec_obs_list = SpectrumObservationList()
             # extend the list adding all the other SpectrumObservationList
-            for name in {"fermi", "magic", "hess", "fact", "veritas"}:
+            for name in {"fermi", "magic", "veritas", "fact", "hess"}:
                 spec_obs = SpectrumObservationList.read(f"results/spectra/{name}")
                 spec_obs_list.extend(spec_obs)
         else:
