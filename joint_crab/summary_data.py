@@ -2,6 +2,7 @@
 import logging
 from pathlib import Path
 from gammapy.data import DataStore
+import astropy.units as u
 from .conf import config
 
 log = logging.getLogger(__name__)
@@ -96,8 +97,10 @@ def make_summary_latex():
             e_min = dataset.energy_range[0].to("TeV").value
             E_min = f"{e_min:.2f} & "
         else:
-            livetime = spec.livetime.to("hour").value
-            T_obs = f"{livetime:.2f} h & "
+            data_store = DataStore.from_dir(f"data/{dataset.name}")
+            ontime = sum(data_store.obs_table["ONTIME"]) * u.s
+            ontime = ontime.to('h')
+            T_obs = f"{ontime:.2f} h & "
             # in case of the IACT e_min is taken from the staked obs
             e_min = min(e_min_list)
             E_min = f"{e_min.to('TeV').value:.2f} & "
