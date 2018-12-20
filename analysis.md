@@ -69,11 +69,11 @@ You may choose to perform the whole analysis with a single command or do it in a
   
 `$ ./make.py plot-errorbands`
 
-* Fig. 3: [results/figures/errorband_sed_veritas.png](results/figures/errorband_sed_veritas.png) | [results/figures/errorband_sed_veritas.pdf](results/figures/errorband_sed_veritas.pdf)
+* Fig. 4: [results/figures/errorband_sed_veritas.png](results/figures/errorband_sed_veritas.png) | [results/figures/errorband_sed_veritas.pdf](results/figures/errorband_sed_veritas.pdf)
   
 `$ ./make.py plot-contours`
     
-* Fig. 4: [results/figures/contours.png](results/figures/contours.png) | [results/figures/contours.pdf](results/figures/contours.pdf)
+* Fig. 3: [results/figures/contours.png](results/figures/contours.png) | [results/figures/contours.pdf](results/figures/contours.pdf)
 * Fig. 5: [results/figures/contours_systematics.png](results/figures/contours_systematics.png) | [results/figures/contours_systematics.pdf](results/figures/contours_systematics.pdf)
   
 
