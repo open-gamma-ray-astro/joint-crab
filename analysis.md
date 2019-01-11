@@ -38,7 +38,7 @@ You may choose to perform the whole analysis with a single command or do it in a
 
 **1- Let's clean eventual previous results produced.**
 
-`$ ./make.py clean
+    $ ./make.py clean
     
 **2- We perform the analysis in a procedural way.**
 
