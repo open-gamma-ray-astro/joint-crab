@@ -47,14 +47,14 @@ You can read these notebooks on Github as static documents, or execute them on y
 
 ##  Executing the `joint-crab` bundle
 
-You can execute the provided scripts in a specific `joint-crab` *conda environment*. This will allow you to reproduce the results published in the paper.
+You can execute the provided scripts in a specific `joint-crab` *conda environment*. This will allow you to reproduce the results published in the paper on Linux or MacOS (not on Windows, because we do use ``healpy`` to access the Fermi-LAT exposure map in HEALPix format, and ``healpy`` doesn't support Windows).
 
 ####  Set-up the environment
 
 As a first approach to assure the reproducibility of the results we provide a [conda configuration file](binder/environment.yml) to build a virtual environment with pinned versions for the software dependencies.
 
 Hence, as a requisite you need [Anaconda](https://www.anaconda.com/download/) or
-[miniconda](https://conda.io/miniconda.html) - Python>=3.6 software installed in your desktop. Once you have installed this software, and downloaded the content of this `joint-crab` repository, you can type in the terminal the following commands at the top-level of the `joint-crab` folder:
+[miniconda](https://conda.io/miniconda.html) software installed in your desktop. Once you have installed this software, and downloaded the content of this `joint-crab` repository, you can type in the terminal the following commands at the top-level of the `joint-crab` folder:
 
     $ conda env create -f binder/environment.yml
     $ conda activate joint-crab
