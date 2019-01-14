@@ -47,7 +47,6 @@ def run_analysis(which):
     utils.write_yaml(contour_results, f"results/fit/contours_{which}.yaml")
 
 
-# TODO: Use parameters.to_dict instead!
 def make_results_dict(fit):
     pars = fit.result[0].model.parameters
     results = {}

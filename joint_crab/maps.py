@@ -21,8 +21,9 @@ def make_map():
     return WcsNDMap.create(skydir=config.source_pos, proj="TAN", width=8, binsz=0.05)
 
 
-# TODO: remove exclusion mask? Shouldn't be needed, no?
 def make_exclusion_mask():
+    # Exclusion mask not really needed because Crab is an isolated source.
+    # But for Galactic sources it would be needed, so we keep it as an example.
     m = make_map()
     m.data += 1  # zero is excluded, one is not excluded
     filename = "results/maps/exclusion_mask.fits.gz"
@@ -48,11 +49,6 @@ def sky_image_compute(which):
 
 
 def sky_image_plot(which):
-    import matplotlib.pyplot as plt
-
-    # TODO: smooth and plot counts image
-    # TODO: overplot on and off regions
-
     filename = f"results/maps/{which}.fits.gz"
     map = WcsNDMap.read(filename)
     fig, ax, im = map.plot(stretch="sqrt")
