@@ -1,4 +1,4 @@
-"""statistics for the joint-crab fit"""
+"""Fit data with likelihood that includes energy scale uncertainty."""
 import logging
 from gammapy.spectrum import SpectrumFit
 from gammapy.spectrum.models import SpectralModel
@@ -12,7 +12,6 @@ log = logging.getLogger(__name__)
 
 
 def main():
-    """Fit data with likelihood that includes energy scale uncertainty."""
     log.info("Joint fit including systematics")
 
     log.info("Running fit")
