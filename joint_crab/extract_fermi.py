@@ -54,7 +54,9 @@ class SpectrumExtractionFermi1D(object):
 
         # Not the real Fermi-LAT EDISP
         # Use 5% energy resolution as approximation
-        edisp = EnergyDispersion.from_gauss(e_true=self.energy, e_reco=self.energy, sigma=0.05, bias=0)
+        edisp = EnergyDispersion.from_gauss(
+            e_true=self.energy, e_reco=self.energy, sigma=0.05, bias=0
+        )
 
         return SpectrumObservation(
             on_vector=self._on_vector,

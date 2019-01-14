@@ -99,7 +99,7 @@ def make_summary_latex():
         else:
             data_store = DataStore.from_dir(f"data/{dataset.name}")
             ontime = sum(data_store.obs_table["ONTIME"]) * u.s
-            ontime = ontime.to('h').value
+            ontime = ontime.to("h").value
             T_obs = f"{ontime:.2f} h & "
             # in case of the IACT e_min is taken from the staked obs
             e_min = min(e_min_list)
