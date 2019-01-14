@@ -24,4 +24,4 @@ dependencies:
   - naima==0.8.3
   - ruamel.yaml==0.15.81
   - pip:
-    - multinorm
+    - multinorm==0.2
