@@ -69,20 +69,20 @@ def plot_contours_for_dataset(axes, name, color="lightgray"):
     pars = {
         "phi": {
             "label": r"$\phi_0 \,/\,(10^{-11}\,{\rm TeV}^{-1} \, {\rm cm}^{-2} {\rm s}^{-1})$",
-            "lim": [2.8, 5.2],
+            "lim": [2.6, 5.8],
             "ticks": [3, 4, 5],
             "pos": np.array(1e11) * fit["amplitude"],
         },
         "gamma": {
             "label": r"$\Gamma$",
-            "lim": [2.1, 2.9],
-            "ticks": [2.2, 2.4, 2.6, 2.8],
+            "lim": [1.9, 3.],
+            "ticks": [2., 2.3, 2.6, 2.9],
             "pos": fit["alpha"],
         },
         "beta": {
             "label": r"$\beta$",
-            "lim": [0.0, 0.8],
-            "ticks": [0.2, 0.4, 0.6],
+            "lim": [-0.1, 1.0],
+            "ticks": [0.0, 0.3, 0.6, 0.9],
             "pos": fit["beta"],
         },
     }
