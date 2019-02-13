@@ -1,5 +1,6 @@
 """Run spectral fits with Gammapy and sherpa."""
 import logging
+import numpy as np
 from gammapy.spectrum import SpectrumFit
 from . import utils
 from .conf import config
@@ -66,25 +67,25 @@ def make_results_dict(fit):
     return results
 
 
-def compute_contours(fit, numpoints=10):
+def compute_contours(fit, numpoints=20, sigma=np.sqrt(2.3)):
     contours = {}
 
     log.info("Computing contour: (amplitude, alpha)")
-    result = fit.minos_contour("amplitude", "alpha", numpoints=numpoints)
+    result = fit.minos_contour("amplitude", "alpha", numpoints=numpoints, sigma=sigma)
     contours["contour_amplitude_alpha"] = {
         "amplitude": result["x"].tolist(),
         "alpha": result["y"].tolist(),
     }
 
     log.info("Computing contour: (amplitude, beta)")
-    result = fit.minos_contour("amplitude", "beta", numpoints=numpoints)
+    result = fit.minos_contour("amplitude", "beta", numpoints=numpoints, sigma=sigma)
     contours["contour_amplitude_beta"] = {
         "amplitude": result["x"].tolist(),
         "beta": result["y"].tolist(),
     }
 
     log.info("Computing contour: (alpha, beta)")
-    result = fit.minos_contour("alpha", "beta", numpoints=numpoints)
+    result = fit.minos_contour("alpha", "beta", numpoints=numpoints, sigma=sigma)
     contours["contour_alpha_beta"] = {
         "alpha": result["x"].tolist(),
         "beta": result["y"].tolist(),
