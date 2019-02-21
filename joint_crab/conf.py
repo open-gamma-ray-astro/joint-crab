@@ -62,7 +62,7 @@ class PlotConfig:
     fontsize_contours = 18
     label_energy = r"$E\,/\,\mathrm{TeV}$"
     e2dnde_label = (
-        r"$E^2 \cdot {\rm d}\phi/{\rm d}E\,/\,({\rm erg}\,{\rm cm}^{-2} {\rm s}^{-1})$"
+        r"$E^2 \cdot {\rm d}\phi/{\rm d}E\,/\,({\rm erg}\,{\rm cm}^{-2}\,{\rm s}^{-1})$"
     )
 
 

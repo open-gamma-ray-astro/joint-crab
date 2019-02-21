@@ -136,7 +136,7 @@ def add_legend(axes, items):
     axes[2].legend(
         handles=handles,
         loc="center left",
-        fontsize=config.plot.fontsize,
+        fontsize=config.plot.fontsize_contours,
         bbox_to_anchor=(1.0, 0.5),
     )
 
