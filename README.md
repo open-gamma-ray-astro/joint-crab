@@ -1,5 +1,4 @@
-# Towards multi-instrument and reproducible gamma-ray analysis
-
+# Towards open and reproducible multi-instrument analysis in gamma-ray astronomy
 [![DOI](https://zenodo.org/badge/146204837.svg)](https://zenodo.org/badge/latestdoi/146204837)
 
 [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/open-gamma-ray-astro/joint-crab/master?urlpath=lab/tree/joint-crab)
