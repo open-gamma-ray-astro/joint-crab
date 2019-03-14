@@ -52,7 +52,7 @@ def plot_dataset(dataset):
         label="68% containment\nmultivariate sampling",
     )
     plt.plot(
-        table["energy"], table["e2dnde_hi"], lw=2, color="k", label="best fit model"
+        table["energy"], table["e2dnde_hi"], lw=2, color="k"
     )
 
     # Plot formatting
