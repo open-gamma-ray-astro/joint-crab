@@ -7,17 +7,19 @@ This repository contains material related to the paper *Towards multi-instrument
 
 This `joint-crab` bundle allows to reproduce the published results by its installation and execution in the local desktop, using a Docker image or via the Binder cloud service.
 
+The preprint is available at: https://arxiv.org/abs/1903.06621
+
 ##  Contents
 
 ####  Datasets
 
-You may find the datasets used as inputs for the analysis scripts in the [folder data](data). 
+You may find the datasets used as inputs for the analysis scripts in the [folder data](data).
 They are grouped in subfolders accounting for their origin. They consist of Crab observations from the Fermi-LAT gamma-ray space telescope, as well as from four ground-based gamma-ray telescopes (MAGIC, VERITAS, FACT, H.E.S.S.).
 
 ####  Results
 
-The results produced in the analysis are placed in the [folder results](results). 
-The tables and figures published in the paper have been prepared using these results. 
+The results produced in the analysis are placed in the [folder results](results).
+The tables and figures published in the paper have been prepared using these results.
 You may reproduce the results following the instructions given in the [analysis section](analysis.md).
 
 * Table 1: [results/summary/data.md](results/summary/data.md) | [results/summary/data.tex](results/summary/data.tex)
