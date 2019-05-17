@@ -3,11 +3,13 @@
 
 [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/open-gamma-ray-astro/joint-crab/master?urlpath=lab/tree/joint-crab)
 
-This repository contains material related to the paper *Towards multi-instrument and reproducible gamma-ray analysis*.
+This repository contains material related to the publication [Towards multi-instrument and reproducible gamma-ray analysis](https://www.aanda.org/articles/aa/full_html/2019/05/aa34938-18/aa34938-18.html) appeared in A&amp;A 625, A10 (2019)
+
+- DOI: [10.1051/0004-6361/201834938](https://doi.org/10.1051/0004-6361/201834938)
+- ADS: [2019A%26A...625A..10N](https://ui.adsabs.harvard.edu/abs/2019A%26A...625A..10N/abstract)
+- Cite: [Bibtex entry](https://ui.adsabs.harvard.edu/abs/2019A%26A...625A..10N/exportcitation)
 
 This `joint-crab` bundle allows to reproduce the published results by its installation and execution in the local desktop, using a Docker image or via the Binder cloud service.
-
-The preprint is available at: https://arxiv.org/abs/1903.06621
 
 ##  Contents
 
