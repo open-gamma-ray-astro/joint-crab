@@ -5,7 +5,7 @@ channels:
 
 dependencies:
   - gammapy==0.9
-  - python==3.7
+  - python=3.7
   - ipython==7.2.0
   - jupyter==1.0.0
   - jupyterlab==0.35.4
@@ -23,5 +23,6 @@ dependencies:
   - healpy==1.12.8
   - naima==0.8.3
   - ruamel.yaml==0.15.81
+  - pip
   - pip:
     - multinorm==0.2
